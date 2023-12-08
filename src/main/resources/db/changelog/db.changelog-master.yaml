@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changes/01-create-fruits-table.yaml
+  - include:
+      file: db/changelog/changes/02-create-cart_items-table.yaml
+  - include:
+      file: db/changelog/changes/03-create-shopping-cart-table.yaml
+  - include:
+      file: db/changelog/changes/04-create-shopping_carts-cart_items-table.yaml
