@@ -25,4 +25,9 @@ public interface CartItemMapper {
     default void setFruitPrice(@MappingTarget CartItemDto cartItemDto, CartItem cartItem) {
         cartItemDto.setPrice(cartItem.getFruit().getPrice());
     }
+
+    @AfterMapping
+    default void setFruitImage(@MappingTarget CartItemDto cartItemDto, CartItem cartItem) {
+        cartItemDto.setImage(cartItem.getFruit().getImage());
+    }
 }

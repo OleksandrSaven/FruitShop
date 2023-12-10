@@ -29,7 +29,6 @@ public class CartItemServiceImpl implements CartItemService {
             CartItem cartItem = new CartItem();
             cartItem.setFruit(fruitRepository.findById(requestDto.getFruitId()).get());
             cartItem.setQuantity(requestDto.getQuantity());
-
             cartItem.setShoppingCart(shoppingCartRepository
                     .getReferenceById(requestDto.getShoppingCartId()));
             return cartItemMapper.toDto(cartItemRepository.save(cartItem));
